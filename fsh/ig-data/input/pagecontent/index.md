@@ -12,7 +12,6 @@
     <li><a href="#mCODE">Relationship to mCODE</a></li>
     <li><a href="#ProjectPlan">Project Plan</a></li>
     <li><a href="codex_extensions.html">CodeX Extensions</a></li>
-    <li><a href="matching_service_implementation.html">Matching Service Implementation</a></li>
     <li><a href="#Contacts">Contact Information</a></li>
 </ul>
 
@@ -51,7 +50,6 @@
 <p>&nbsp;</p>
 
 <p>For details on the CodeX extensions needed for this use case, please consult the <a href="codex_extensions.html"> CodeX extensions</a> page.</p>
-<p>For details on the matching service implementations, please consult the <a href="matching_service_implementation.html"> matching service implementation</a> page.</p>
 
 <!--
 <h1>Known Issues and Limitations</h1>
