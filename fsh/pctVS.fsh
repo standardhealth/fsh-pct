@@ -1,18 +1,11 @@
 Alias:  ONCOTREE = http://oncotree.mskcc.org
-Alias:  ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:  SCT = http://snomed.info/sct
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   SCT = http://snomed.info/sct
 
 
 ValueSet: OncoTreeVS
 Id: codex-oncotree-vs
 Title: "OncoTree Value Set"
-Description: "Value set containing the OncoTree IDs"
-* codes from system ONCOTREE
-
-
-ValueSet: OncoTreeSCTVS
-Id: codex-oncotree-sct-vs
-Title: "OncoTree SNOMED Value Set"
 Description: "Broad types of primary malignant neoplastic disease. These broad types were decided using OncoTree and then equivalent SNOMED codes were found."
 * SCT#93665005      "Primary malignant neoplasm of adrenal gland (disorder)"
 * SCT#371967001     "Primary malignant neoplasm of ampulla of Vater (disorder)"
@@ -52,6 +45,8 @@ Description: "Broad types of primary malignant neoplastic disease. These broad t
 * SCT#10708511000119108 "Primary malignant neoplasm of uterus (disorder)"
 * SCT#372025005     "Primary malignant neoplasm of vagina (disorder)"
 //vulva and vagina together?//
+
+
 
 
 ValueSet: BreastCancerVS
