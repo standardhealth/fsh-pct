@@ -1,0 +1,67 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭────────────────────ImplementationGuide-patient.clinical.trial.matching.json────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: patient.clinical.trial.matching
+canonical: http://mcodeinitiative.org/codex/us/patient.clinical.trial.matching
+version: 0.1.0
+name: DRAFTCodeXImplementationGuideIntegratedTrialMatchingforCancerPatientsandProviders
+title: "DRAFT - CodeX Implementation Guide: Integrated Trial Matching for Cancer
+  Patients and Providers"
+status: active
+publisher: The MITRE Corporation
+contact:
+  - name: CodeX Team
+    telecom:
+      - system: url
+        value: https://mitre.org/
+      - system: email
+        value: sbratt@mitre.org
+description: The goal of CodeX Integrated Trial Matching for Cancer Patients and Providers
+  project is to develop open data standards and open APIs that enable
+  interoperable, scalable, and accessible clinical trial matching services.
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: CI Build
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+template: fhir.base.template#current
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+  Table of Contents: toc.html
+  Artifact Index: artifacts.html
+  Matching Service Integration: matching_service_integration.html
+  Support:
+    FHIR Spec: new-tab external http://hl7.org/fhir/R4/index.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+history:
+current: http://mcodeinitiative.org/codex/us/patient.clinical.trial.matching
+1.0.0:
+    fhirversion: 4.0.1
+    date: 2099-01-01
+    desc: Initial Draft Release
+    path: http://mcodeinitiative.org/codex/us/patient.clinical.trial.matching
+    status: ballot
+    sequence: STU 1
