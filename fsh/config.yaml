@@ -32,7 +32,6 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 3.1.0
-  hl7.fhir.us.mcode: 1.0.0
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
