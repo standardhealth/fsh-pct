@@ -1,10 +1,9 @@
-.DS_Store
-Thumbs.db
-/input-cache/org.hl7.fhir.publisher.jar
-/output
-/template
-/temp
-/input
+output**
+temp**
+template**
+input**
+input-cache**
 ig.ini
 package.json
 package-list.json
+.DS_Store
