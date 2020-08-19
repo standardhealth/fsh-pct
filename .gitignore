@@ -8,3 +8,6 @@ Thumbs.db
 ig.ini
 package.json
 package-list.json
+fsh/build
+.vscode/
+.gitignore
