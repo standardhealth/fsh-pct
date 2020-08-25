@@ -1,19 +1,17 @@
-Profile: TrialMatchInput
+
+// This is the bundle that contains the parameters for the Trial Match Search
+Profile: TrialMatchDataBundle
 Parent: Bundle
-Id: trial-match-input
-Title: "Trial Match Inputs"
-Description: "Trial Match Service Input Parameters"
+Id: trial-match-data-bundle
+Title: "Trial Match Data Bundle"
+Description: "mCODE data for the Trial Match Service"
 
-* type = #message
-// add all of the message dependent items such as message code, the messages header as the first item in the entry array
-
+* type = #collection
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "entry.resource.resolve()"
 //SUSHI error this does not exist * entry ^slicing.discriminator.strategy = includes
 * entry ^slicing.rules = #open
 * entry contains
-    matchMessageHeader 0..1 and
-    trialMatchParameters 0..1 and
     cancerPatient 0..1 and
     primaryCancer 0..* and
     secondaryCancer 0..* and
@@ -25,8 +23,6 @@ Description: "Trial Match Service Input Parameters"
     cancerRadiation 0..* and
     cancerSurgical 0..*
     
-* entry[matchMessageHeader].resource only MessageHeader
-* entry[trialMatchParameters].resource only Parameters
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancer].resource only PrimaryCancerCondition
 * entry[secondaryCancer].resource only SecondaryCancerCondition
