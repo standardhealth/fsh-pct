@@ -9,8 +9,8 @@
 
 <ul>
     <li><a href="#About">About</a></li>
-    <li><a href="#mCODE">Relationship to mCODE</a></li>
-    <li><a href="matching_service_integration.html">Integration with Matching Services</a></li>
+    <li><a href="#mCODE">Relationship to mCODE&trade;</a></li>
+    <li><a href="matching_service_integration.html">Matching Service Integration</a></li>
     <li><a href="#Contacts">Contact Information</a></li>
 </ul>
 
@@ -30,7 +30,7 @@
 
 <p> In order to meet this goal, the project team aims to develop open standards and open APIs that enable interoperable, scalabale, and accessibile clinical trial matching services. After these standards are developed, the team will drive awareness of and commitment to use these standards in the industry, thereby improving clinical trial matching for patients and their care teams.</p> 
 
-<p>For details on the how trial matching services can become mCODE-enabled, please consult the <a href="matching_service_integration.html"> Integration with Matching Services</a> page.</p>
+<p>For details on the how trial matching services can become mCODE-enabled, please consult the <a href="matching_service_integration.html">Matching Service Integration</a> page.</p>
 
 <p> For the pilot, only a minimum set of eligibility criteria will be used. This minimum set was determined by the ACS CAN working group dedicated to understanding and solving the barriers of patients enrolling in clinical trials. The goal of this minimum set is to narrow down the list of potential trials a patient may match to, so the patient can review the small list of trials with their provider.</p> 
 
@@ -47,7 +47,7 @@
 
 <h3><a name="mCODE">Relationship to mCODE</a></h3>
 
-<p>The <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">minimal Common Oncology Data Elements (mCODE) standard</a> is designed to enable clinicians to capturea critical set of information for each cancer patient in a way that can be collected, analyzed, and shared quickly and more easily by oncology stakeholders. The American Society of Clinical Oncology, CancerLinQ, the Alliance for Clinical Trials in Oncology, the U.S. Food and Drug Administration, and the MITRE Corporation are collaborating to develop and launch mCODE. mCODE is being established as the standard Fast Healthcare Interoperability Resources (FHIR)-based data element set that will be captured for all cancer patients. These elements are essential for analyzing patient characteristics, treatments, and outcomes across patients and practices to improve treatment and care coordination.</p>
+<p>The <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">minimal Common Oncology Data Elements (mCODE) standard</a> is designed to enable clinicians to capture a critical set of information for each cancer patient in a way that can be collected, analyzed, and shared quickly and more easily by oncology stakeholders. The American Society of Clinical Oncology, CancerLinQ, the Alliance for Clinical Trials in Oncology, the U.S. Food and Drug Administration, and the MITRE Corporation are collaborating to develop and launch mCODE. mCODE is being established as the standard Fast Healthcare Interoperability Resources (FHIR)-based data element set that will be captured for all cancer patients. These elements are essential for analyzing patient characteristics, treatments, and outcomes across patients and practices to improve treatment and care coordination.</p>
 
 <p>While the “m” in mCODE stands for minimal, there are many potential ways to adapt and extend mCODE for specific use cases such as patient data management, registry reporting, payment models, and more. To help identify, prioritize, and implement new use cases, MITRE and HL7 collaboratively launched the CodeX™ FHIR Accelerator. CodeX™ employs a multi-stakeholder process to rapidly address high-priority oncology use cases using mCODE that can be implemented on a national basis.</p>
 

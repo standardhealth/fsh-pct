@@ -1,14 +1,12 @@
-
-// This is the bundle that contains the parameters for the Trial Match Search
 Profile: TrialMatchDataBundle
 Parent: Bundle
 Id: trial-match-data-bundle
 Title: "Trial Match Data Bundle"
-Description: "mCODE data for the Trial Match Service"
+Description: "Collection of mCODE data for the Trial Match Service"
 
 * type = #collection
 * entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "entry.resource.resolve()"
+* entry ^slicing.discriminator.path = "resource"
 //SUSHI error this does not exist * entry ^slicing.discriminator.strategy = includes
 * entry ^slicing.rules = #open
 * entry contains
