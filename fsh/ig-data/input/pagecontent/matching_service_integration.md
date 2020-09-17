@@ -57,11 +57,14 @@
   <td>SecondaryCancerDisorderVS</td>
 </tr>
 <tr>
-  <td>Stage</td>
+  <td rowspan="2">Stage</td>
   <td>TNM Clinical Stage Group</td>
   <td>value</td>
   <td>TNMStageGroupVS</td>
 </tr>
+  <td>TNM Pathological Stage Group</td>
+  <td>value</td>
+  <td>TNMStageGroupVS</td>
 <tr>
   <td rowspan="2">Biomarkers</td>
   <td>Cancer Genetic Variant</td>

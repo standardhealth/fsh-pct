@@ -51,7 +51,7 @@
 
 <p>While the “m” in mCODE stands for minimal, there are many potential ways to adapt and extend mCODE for specific use cases such as patient data management, registry reporting, payment models, and more. To help identify, prioritize, and implement new use cases, MITRE and HL7 collaboratively launched the CodeX™ FHIR Accelerator. CodeX™ employs a multi-stakeholder process to rapidly address high-priority oncology use cases using mCODE that can be implemented on a national basis.</p>
 
-<p>This implementation guide intends to cover content necessary for Integrated Trial Matching for Cancer Patients and Providers that is not part of the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE v1.0 R4 specification</a>. Implementers should refer directly to mCODE for the specification of all mCODE elements.</p>
+<p>This implementation guide intends to cover content necessary for Integrated Trial Matching for Cancer Patients and Providers that is not part of the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE v1.0 R4 specification</a>. Implementers should refer directly to mCODE for the specification of all mCODE elements. To see the optimized patient data mapped to mCODE for filtering clinical trials, please consult the <a href="matching_service_integration.html">Matching Service Integration</a> page.</p>
 
 <p>The actors intended for this implementation guide are health systems, EHRs, clinical trial matching services, and patient portals.</p>
 
