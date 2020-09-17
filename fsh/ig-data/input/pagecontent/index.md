@@ -32,9 +32,9 @@
 
 <p>For details on the how trial matching services can become mCODE-enabled, please consult the <a href="matching_service_integration.html">Matching Service Integration</a> page.</p>
 
-<p> For the pilot, only a minimum set of eligibility criteria will be used. This minimum set was determined by the ACS CAN working group dedicated to understanding and solving the barriers of patients enrolling in clinical trials. The goal of this minimum set is to narrow down the list of potential trials a patient may match to, so the patient can review the small list of trials with their provider.</p> 
+<p> For the pilot, only a minimum set of eligibility criteria will be used to filter clinical trials. This minimum set was determined by the ACS CAN working group dedicated to understanding and solving the barriers of patients enrolling in clinical trials. The goal of this minimum set, or optimized patient data, is to narrow down the list of potential trials a patient may match to, so the patient can review the small list of trials with their provider.</p> 
 
-<p>The minimum set of eligibility criteria include:</p>
+<p>The optimized patient data to filter clincial trials includes:</p>
   <ul>
     <li>Cancer type</li>
     <li>Cancer sub-type</li>
@@ -42,7 +42,7 @@
     <li>Presence of metastasis</li>
     <li>Stage</li>
     <li>Biomarkers</li>
-    <li>Treatment information</li>
+    <li>Treatments</li>
   </ul>
 
 <h3><a name="mCODE">Relationship to mCODE</a></h3>

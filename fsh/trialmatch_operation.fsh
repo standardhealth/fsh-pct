@@ -2,57 +2,59 @@ Alias: PubStat = http://hl7.org/fhir/ValueSet/publication-status
 Alias: OpKind = http://hl7.org/fhir/ValueSet/operation-kind
 Alias: dataType = http://hl7.org/fhir/ValueSet/all-types
 
-Instance: TrialMatchService
+Instance: ClinicalTrialMatchService
 InstanceOf: OperationDefinition
-Title: "Trial Match Service"
+Title: "Clinical Trial Match Service"
 Usage: #definition
 Description: "Operation defintion for clinical trial matching service"
-* name = "trialMatchService"
+* name = "clinicalTrialMatchService"
 * status = PubStat#draft
-* kind = OpKind#query
-* system = true
+* kind = OpKind#operation
+* system = false
 * type = true
-* instance = true
+* instance = false
 * code = #match
+* resource = #ResearchStudy
 
 
-* parameter[0].name = #trialMatchInput
+* parameter[0].name = #zipCode
 * parameter[0].use = #in
 * parameter[0].min = 0
 * parameter[0].max = "1"
-* parameter[0].type = dataType#Bundle // This should be TrialMatchMessageBundle
-* parameter[0].documentation = "TrialMatchMessageBundle that contains the MessageHeader, Parameters and mCODE Data for input to the service"
+* parameter[0].type = dataType#string
+* parameter[0].documentation = "The zipcode of the area in which to search"
 
-* parameter[1].name = #trialMatchOutput
-* parameter[1].use = #out
-* parameter[1].min = 1
-* parameter[1].max = "*"
-* parameter[1].type = dataType#Bundle // This should be TriaLMatchResultsBundle
-* parameter[1].documentation = "TrialMatchResultsBundle that contains the results from the Trial Match Service"
+* parameter[1].name = #travelRadius
+* parameter[1].use = #in
+* parameter[1].min = 0
+* parameter[1].max = "1"
+* parameter[1].type = dataType#string
+* parameter[1].documentation = "The distance from the zipcode to include in the search radius"
 
-/*
-* parameter ^slicing.discriminator.type = #profile
-* parameter ^slicing.discriminator.path = "parameter.type.resolve()"
-* parameter ^slicing.rules = #open
-* parameter contains
-     trialMatchInput 0..1 and
-     trialMatchOutput 0..*
+* parameter[2].name = #phase
+* parameter[2].use = #in
+* parameter[2].min = 0
+* parameter[2].max = "1"
+* parameter[2].type = dataType#string
+* parameter[2].documentation = "The phase of the clinical trial"
 
-// Input Parameters
-* parameter[trialMatchInput].type only TrialMatchMessageBundle
-//* parameter[trialMatchInput].name = #trialMatchInput
-* parameter[trialMatchInput].use = #in
-//* parameter[trialMatchInput].min = 0
-//* parameter[trialMatchInput].max = "1"
-//* parameter[trialMatchInput].type only TrialMatchMessageBundle
-* parameter[trialMatchInput].documentation = "Message that contains the MessageHeader, Parameters and Data for the service"
+* parameter[3].name = #recruitmentStatus
+* parameter[3].use = #in
+* parameter[3].min = 0
+* parameter[3].max = "1"
+* parameter[3].type = dataType#string
+* parameter[3].documentation = "The recruitement status of the clinical trial"
 
-// Output Parameters
-* parameter[trialMatchOutput].type only ResearchStudy
-//* parameter[trialMatchOutput].name = #trialMatchOutput
-* parameter[trialMatchOutput].use = #out
-//* parameter[trialMatchOutput].min = 1
-//* parameter[trialMatchOutput].max = "*"
-//* parameter[trialMatchOutput].type only ResearchStudy
-* parameter[trialMatchOutput].documentation = "List of all applicable clinical trials"
-*/
+* parameter[4].name = #trialMatchClinicalData
+* parameter[4].use = #in
+* parameter[4].min = 0
+* parameter[4].max = "1"
+* parameter[4].type = dataType#Bundle 
+* parameter[4].documentation = "TrialMatchDataBundle that contains the mCODE clinical patient data"
+
+* parameter[5].name = #trialMatchOutput
+* parameter[5].use = #out
+* parameter[5].min = 1
+* parameter[5].max = "1"
+* parameter[5].type = dataType#Bundle 
+* parameter[5].documentation = "TrialMatchResultSet that contains the results from the Clinical Trial Match Service"

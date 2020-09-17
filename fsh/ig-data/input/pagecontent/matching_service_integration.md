@@ -17,80 +17,84 @@
     }  
 </style>
 
-<h3>Trial Matching Service Operation Definition</h3>
-<p>To mCODE enable the matching service, FHIR resources are used by the <a href="OperationDefinition-TrialMatchService.html">Trial Matching Service</a> which are defined in this implementation guide. The Trial Matching Service takes a <a href="StructureDefinition-trial-match-message-bundle.html">Trial Match Message Bundle</a> as input and returns a <a href="StructureDefinition-trial-match-results-bundle.html">Trial Match Results Bundle</a>.</p>
+<h3>Clinical Trial Matching Service Operation Definition</h3>
+<p>To mCODE&trade; enable the matching service, FHIR resources are used by the <a href="OperationDefinition-ClinicalTrialMatchService.html">Clinical Trial Matching Service</a> which are defined in this implementation guide.</p>
 
-<span class="img-container">
-    <img src="match_service_workflow.png" alt="Integrated Trial Matching for Cancer Patients and Providers Workflow Diagram" width="65%">
-</span>
 
-<h4>Trial Matching Service Input</h4>
-<p>The input bundle contains a <a href="StructureDefinition-trial-match-message-header.html">Trial Match Message Header</a>, FHIR Parameters and a <a href="StructureDefinition-trial-match-data-bundle.html">Trial Match Data Bundle</a>. The Trial Match Data Bundle contains the patient data, including the minimum eligiblity criteria, as mCODE&trade;. For more information on the mCODE profiles, consult the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE specification</a>.</p>
+<h4>Clinical Trial Matching Service Input</h4>
+<p>The inputs include a set parameters and a <a href="StructureDefinition-trial-match-data-bundle.html">Trial Match Data Bundle</a>. The Trial Match Data Bundle contains the optimized patient data as mCODE to filter clinical trials. For more information on the mCODE profiles, consult the <a href="https://hl7.org/fhir/us/mcode/STU1" target="_blank">mCODE specification</a>.</p>
 
 <table class="tg">
-<caption>Table 1. Minimum Eligibility Criteria Mapped to mCODE</caption>
+<caption>Table 1. Optimized Patient Data Mapped to mCODE</caption>
 <tr>
-  <th class="tg-bold">Criteria</th>
+  <th class="tg-bold">Filter Criteria</th>
   <th class="tg-bold">Profile</th>
   <th class="tg-bold">Data Element</th>
+  <th class="tg-bold">Value Set</th>
 </tr>
 <tr>
   <td>Age</td>
   <td>Cancer Patient</td>
-  <td>Birth Date</td>
+  <td>birthDate</td>
+  <td>N/A, age is dervied from birthdate</td>
 </tr>
 <tr>
   <td>Cancer Type</td>
   <td>Primary Cancer Condition</td>
-  <td>Condition Code</td>
+  <td>code</td>
+  <td>PrimaryOrUncertainBehaviorCancerDisorderVS</td>
 </tr>
 <tr>
   <td>Cancer Sub-type</td>
   <td>Primary Cancer Condition</td>
-  <td>Extension - histology/morphology behavior</td>
+  <td>mcode-histology-morphology-behavior</td>
+  <td>HistologyMorphologyBehaviorVS</td>
 </tr>
 <tr>
   <td>Presence of Metastasis</td>
   <td>Secondary Cancer Condition</td>
-  <td>Condition Code</td>
+  <td>code</td>
+  <td>SecondaryCancerDisorderVS</td>
 </tr>
 <tr>
-  <td rowspan="2">Stage</td>
+  <td>Stage</td>
   <td>TNM Clinical Stage Group</td>
-  <td>Value</td>
+  <td>value</td>
+  <td>TNMStageGroupVS</td>
 </tr>
 <tr>
-  <td>TNM Pathological Regional Nodes Category</td>
-  <td>Value</td>
-</tr>
-<tr>
-  <td rowspan="2">Biomarker/subtype</td>
+  <td rowspan="2">Biomarkers</td>
   <td>Cancer Genetic Variant</td>
-  <td>Value</td>
+  <td>component:GeneStudied</td>
+  <td>HGNCVS</td>
 </tr>
 <tr>
   <td>Tumor Marker</td>
-  <td>Code</td>
+  <td>code</td>
+  <td>TumorMarkerTestVS</td>
 </tr>
 <tr>
-  <td rowspan="3">Treatment</td>
+  <td rowspan="3">Treatments</td>
   <td>Cancer Related Medication Statement</td>
-  <td>Medication</td>
+  <td>medication</td>
+  <td>US Core Medication Codes (RxNorm)</td>
 </tr>
 <tr>
   <td>Cancer Related Radiation Procedure</td>
-  <td>Code</td>
+  <td>code</td>
+  <td>RadiationProcedureVS</td>
 </tr>
 <tr>
   <td>Cancer Related Surgical Procedure</td>
-  <td>Code</td>
+  <td>code</td>
+  <td>CancerRelatedSurgicalProcedureVS</td>
 </tr>
 </table>
 
 <p>&nbsp;</p>
 
 <h4>Trial Matching Service Output</h4>
-<p>The return bundle contains a <a href="StructureDefinition-trial-match-message-header.html">Trial Match Message Header</a> and a <a href="StructureDefinition-trial-match-result-set.html">Trial Match Result Set</a>. The Trial Match Result Set contains a FHIR ResearchStudy for each matching clinical trial. Each ResearchStudy entry should contain, at a minimum, the following fields</p>
+<p>The matching service returns a <a href="StructureDefinition-trial-match-result-set.html">Trial Match Result Set</a>. The Trial Match Result Set contains a FHIR ResearchStudy for each matching clinical trial. Each ResearchStudy entry should contain, at a minimum, the following fields</p>
   <ul>
     <li>Title</li>
     <li>Summary</li>
