@@ -6,4 +6,7 @@ input-cache**
 ig.ini
 package.json
 package-list.json
+fsh/build
+.vscode/
+.gitignore
 .DS_Store
