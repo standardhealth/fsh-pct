@@ -91,6 +91,17 @@
   <td>Cancer Related Surgical Procedure</td>
   <td>code</td>
   <td>CancerRelatedSurgicalProcedureVS</td>
+<tr>
+  <td rowspan="2">Performance Status</td>
+  <td>ECOG Performance Status</td>
+  <td>value</td>
+  <td>N/A, actual result</td>
+</tr>
+<tr>
+  <td>Karnofsky Performance Status</td>
+  <td>value</td>
+  <td>N/A, actual result</td>
+</tr>
 </tr>
 </table>
 
@@ -111,5 +122,7 @@
 
 <h3>Additional Project Links</h3>
 <p><a href="https://github.com/mcode/clinical-trial-matching-engine" target="_blank">GitHub Code Repository for the User Interface</a></p>
-<p><a href="https://github.com/mcode/clinical-trial-matching-service" target="_blank">GitHub Code Repository for the TrialScope Service Wrapper</a></p>
-<p><a href="https://github.com/mcode/clinical-trial-matching-engine/wiki" target="_blank">GitHub Wiki for the mCODE Matching Service API</a></p>
+<p><a href="https://github.com/mcode/clinical-trial-matching-service-trialscope" target="_blank">GitHub Code Repository for the TrialScope Service Wrapper</a></p>
+<p><a href="https://github.com/mcode/clinical-trial-matching-service-trialjectory" target="_blank">GitHub Code Repository for the TrialJectory Service Wrapper</a></p>
+<p><a href="https://github.com/mcode/clinical-trial-matching-service-breastcancertrials.org" target="_blank">GitHub Code Repository for the BreastCancerTrials.org Service Wrapper</a></p>
+<p><a href="https://github.com/mcode/clinical-trial-matching-service" target="_blank">GitHub Code Repository for the Service Library</a></p>
