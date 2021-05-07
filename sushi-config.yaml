@@ -38,10 +38,6 @@ parameters:
 copyrightYear: 2020+
 releaseLabel: CI Build
 
-# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
-# │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-template: fhir.base.template#current
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
@@ -52,7 +48,7 @@ menu:
   Artifact Index: artifacts.html
   Matching Service Integration: matching_service_integration.html
   Support:
-    FHIR Spec: new-tab external http://hl7.org/fhir/R4/index.html
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │

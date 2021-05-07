@@ -43,6 +43,7 @@
     <li>Stage</li>
     <li>Biomarkers</li>
     <li>Treatments</li>
+    <li>Performance Status (ECOG and Karnofsky)</li>
   </ul>
 
 <h3><a name="mCODE">Relationship to mCODE</a></h3>
@@ -61,7 +62,11 @@
     <li>The MITRE Corporation</li>
     <li>Cancer Insights</li>
     <li>TrialScope</li>
-    <li>Breastcancertrials.org</li>
+    <li>BreastCancerTrials.org</li>
+    <li>TrialJectory</li>
+    <li>UTSW</li>
+    <li>MyLinks</li>
+    <li>Massive Bio</li>
   </ul>
 
 <h3><a name="Contacts">Contact Information</a></h3>

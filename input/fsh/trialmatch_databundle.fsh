@@ -19,7 +19,9 @@ Description: "Collection of mCODE data for the Trial Match Service"
     cancerGeneticVariant 0..* and
     cancerMedication 0..* and
     cancerRadiation 0..* and
-    cancerSurgical 0..*
+    cancerSurgical 0..* and
+    karnofsky 0..* and 
+    ecog 0..* 
     
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancer].resource only PrimaryCancerCondition
@@ -31,3 +33,5 @@ Description: "Collection of mCODE data for the Trial Match Service"
 * entry[cancerMedication].resource only CancerRelatedMedicationStatement
 * entry[cancerRadiation].resource only CancerRelatedRadiationProcedure
 * entry[cancerSurgical].resource only CancerRelatedSurgicalProcedure
+* entry[karnofsky].resource only KarnofskyPerformanceStatus
+* entry[ecog].resource only ECOGPerformanceStatus
